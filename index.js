@@ -26,6 +26,8 @@ const generateReadMe = (answers) =>
   ${answers.description}`;
 
 promptUser()
-  .then((answers) => writeFileAsync("READMESAMPLE.md", generateReadMe(answers)))
+  .then((answers) =>
+    writeFileAsync("./demo/README-demo.md", generateReadMe(answers))
+  )
   .then(() => console.log("Successfully wrote to README"))
   .catch((err) => console.error(err));
