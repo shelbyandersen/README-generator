@@ -9,12 +9,12 @@ const promptUser = () =>
     {
       type: "input",
       name: "title",
-      message: "What is the title of your project?",
+      message: "What is the title of your application?",
     },
     {
       type: "input",
       name: "description",
-      message: "What is the description of your project?",
+      message: "What is the description of your application?",
     },
     // {
     //   type: "input",
@@ -24,7 +24,13 @@ const promptUser = () =>
     {
       type: "input",
       name: "installation",
-      message: "How do you install your project?",
+      message: "How do you install your application?",
+    },
+
+    {
+      type: "input",
+      name: "usage",
+      message: "Please describe how to use your application",
     },
   ]);
 
@@ -40,6 +46,9 @@ const generateReadMe = (answers) =>
 
   ### Installation
   ${answers.installation}
+
+  ### Usage
+  ${answers.usage}
   `;
 
 promptUser()
