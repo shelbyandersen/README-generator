@@ -75,9 +75,6 @@ const generateReadMe = (answers) =>
 
   ### Description 
   ${answers.description}
-  
-  ### Table of Contents 
-  ${answers.tableofcontents}
 
   ### Installation
   ${answers.installation}
