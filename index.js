@@ -38,6 +38,19 @@ const promptUser = () =>
       name: "contributing",
       message: "Please list who has contributed to your application",
     },
+
+    {
+      type: "input",
+      name: "tests",
+      message: "Please describe how to test your application",
+    },
+
+    {
+      type: "list",
+      name: "license",
+      message: "Please choose which license you would like to display",
+      choices: ["MIT", "Choice A", "Choice B"],
+    },
   ]);
 
 const generateReadMe = (answers) =>
@@ -58,6 +71,12 @@ const generateReadMe = (answers) =>
 
   ### Contributing
   ${answers.contributing}
+
+  ### Testing
+  ${answers.tests}
+
+  ### License
+  ${answers.license}
   `;
 
 promptUser()
