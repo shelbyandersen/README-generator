@@ -2,7 +2,7 @@
 
 ### Description
 
-This project features a README generator that a developer can use to generate a READMDE.md file based on user input from the terminal. The objective of this application is to help developers generate a README in a timely manner. The user is prompted to answer a series of questions that will ultimately generate the final file.
+This project features a README generator that a developer can use to generate a README.md file based on user input from the terminal. The objective of this application is to help developers generate a README in a timely manner. The user is prompted to answer a series of questions that will ultimately generate the final file.
 
 This application utilizes node.js, inquires, fs, and an index.js file that holds the code that contains the questions to ask users and to populate their answers.
 

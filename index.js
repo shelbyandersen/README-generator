@@ -18,11 +18,7 @@ const promptUser = () =>
       name: "description",
       message: "What is the description of your application?",
     },
-    // {
-    //   type: "input",
-    //   name: "tableofcontents",
-    //   message: "Please enter your table of contents",
-    // },
+
     {
       type: "input",
       name: "installation",
@@ -51,7 +47,7 @@ const promptUser = () =>
       type: "list",
       name: "license",
       message: "Please choose which license you would like to display",
-      choices: ["MIT", "Choice A", "Choice B"],
+      choices: ["MIT", "Apache2.0", "GPL3.0", "BSD3", "none"],
     },
 
     {
@@ -73,6 +69,24 @@ const generateReadMe = (answers) =>
   `
   ### ${answers.title}
 
+  ### Table of Contents
+
+  *[Title](#Title)
+
+  *[Description](#Description)
+
+  *[Installation](#Installation)
+
+  *[Usage](#Usage)
+
+  *[Contributing](#Contributing)
+
+  *[Testing](#Testing)
+
+  *[License](#License)
+
+  *[Questions](#Questions)
+
   ### Description 
   ${answers.description}
 
@@ -89,7 +103,8 @@ const generateReadMe = (answers) =>
   ${answers.tests}
 
   ### License
-  ${answers.license}
+  ![GitHub license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
+  This application is using the ${answers.license} license. 
 
   ### Questions
   If you have any questions, please contact:
