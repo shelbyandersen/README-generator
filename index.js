@@ -4,6 +4,8 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// User input - ask questions that will build README
+
 const promptUser = () =>
   inquirer.prompt([
     {
@@ -53,6 +55,8 @@ const promptUser = () =>
     },
   ]);
 
+// Write users answers to generate README
+
 const generateReadMe = (answers) =>
   `
   ### ${answers.title}
@@ -77,7 +81,10 @@ const generateReadMe = (answers) =>
 
   ### License
   ${answers.license}
+
   `;
+
+// Generate README file
 
 promptUser()
   .then((answers) =>
