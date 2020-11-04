@@ -16,6 +16,16 @@ const promptUser = () =>
       name: "description",
       message: "What is the description of your project?",
     },
+    // {
+    //   type: "input",
+    //   name: "tableofcontents",
+    //   message: "Please enter your table of contents",
+    // },
+    {
+      type: "input",
+      name: "installation",
+      message: "How do you install your project?",
+    },
   ]);
 
 const generateReadMe = (answers) =>
@@ -23,7 +33,14 @@ const generateReadMe = (answers) =>
   ### ${answers.title}
 
   ### Description 
-  ${answers.description}`;
+  ${answers.description}
+  
+  ### Table of Contents 
+  ${answers.tableofcontents}
+
+  ### Installation
+  ${answers.installation}
+  `;
 
 promptUser()
   .then((answers) =>
