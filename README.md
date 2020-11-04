@@ -8,6 +8,8 @@ This application utilizes node.js, inquires, fs, and an index.js file that holds
 
 There is a demo folder in this application. This is where the README-demo.md file will be created (this is the file created once the user answers all the questions prompted).
 
+To view the final walkthrough video, please use this link: https://drive.google.com/file/d/1pYHx8tvOmSE-dCjTdNU87G94p6Ib6ox5/view?usp=sharing
+
 ### Installation
 
 The code for the Responsive Portfolio can be found on github using the following link: https://github.com/shelbyandersen/README-generator
