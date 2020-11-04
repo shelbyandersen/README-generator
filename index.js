@@ -53,6 +53,12 @@ const promptUser = () =>
       message: "Please choose which license you would like to display",
       choices: ["MIT", "Choice A", "Choice B"],
     },
+
+    {
+      type: "input",
+      name: "github",
+      message: "Please enter your Github username",
+    },
   ]);
 
 // Write users answers to generate README
@@ -81,6 +87,10 @@ const generateReadMe = (answers) =>
 
   ### License
   ${answers.license}
+
+  ### Questions
+  If you have any questions, please contact:
+  https://github.com/${answers.github}
 
   `;
 
