@@ -59,6 +59,12 @@ const promptUser = () =>
       name: "github",
       message: "Please enter your Github username",
     },
+
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your email address",
+    },
   ]);
 
 // Write users answers to generate README
@@ -92,6 +98,8 @@ const generateReadMe = (answers) =>
   If you have any questions, please contact:
   https://github.com/${answers.github}
 
+  And please email me at:
+  ${answers.email}
   `;
 
 // Generate README file
