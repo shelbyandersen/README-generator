@@ -32,6 +32,12 @@ const promptUser = () =>
       name: "usage",
       message: "Please describe how to use your application",
     },
+
+    {
+      type: "input",
+      name: "contributing",
+      message: "Please list who has contributed to your application",
+    },
   ]);
 
 const generateReadMe = (answers) =>
@@ -49,6 +55,9 @@ const generateReadMe = (answers) =>
 
   ### Usage
   ${answers.usage}
+
+  ### Contributing
+  ${answers.contributing}
   `;
 
 promptUser()
